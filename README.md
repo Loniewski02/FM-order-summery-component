@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Loniewski02/FM-order-summery-component
-- Live Site URL: 
+- Live Site URL: https://loniewski02.github.io/FM-order-summery-component/
 
 ## My process
 

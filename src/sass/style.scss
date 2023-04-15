@@ -85,6 +85,7 @@ body {
 			color: $bright-blue;
 			font-weight: 700;
 			text-decoration: none;
+			border: 2px dashed transparent;
 			transition: color 0.1s;
 
 			&::before {
@@ -105,6 +106,12 @@ body {
 			&:hover::before {
 				height: 0;
 			}
+
+			&:focus {
+				outline: none;
+				border: 2px dashed $bright-blue;
+				color: $btn-hover;
+			}
 		}
 	}
 
@@ -116,6 +123,11 @@ body {
 		border: 2px dashed transparent;
 		cursor: pointer;
 
+		&:focus {
+			outline: none;
+			border: 2px dashed $bright-blue;
+		}
+
 		&--accept {
 			margin-bottom: 1.1em;
 			padding: 1em 0;
@@ -124,8 +136,13 @@ body {
 			color: #fff;
 			transition: background-color 0.3s;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $btn-hover;
+			}
+
+			&:focus {
+				opacity: 0.8;
 			}
 		}
 
@@ -135,7 +152,8 @@ body {
 			background-color: transparent;
 			transition: color 0.2s;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $dark-blue;
 			}
 		}
