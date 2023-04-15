@@ -1,0 +1,193 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 1.6rem;
+	background-color: $pale-blue;
+	background-image: url('../img/icons/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.app {
+	width: min-content;
+	border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+
+	.inner-wrapper {
+		padding: 2em 1.5em;
+		text-align: center;
+	}
+
+	&__img {
+		max-width: 32.7rem;
+	}
+
+	&__heading {
+		font-size: 2.2rem;
+		color: $dark-blue;
+		font-weight: 900;
+	}
+
+	&__text {
+		margin-top: 1em;
+		font-size: 1.5rem;
+		color: $desaturated-blue;
+		line-height: 25px;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 1.5em 0;
+		padding: 1em;
+		background-color: $very-pale-blue;
+		border-radius: 11px;
+
+		&-info {
+			margin-left: -2em;
+			font-size: 1.4rem;
+			&-name {
+				margin-bottom: 0.2em;
+				color: $dark-blue;
+				font-weight: 900;
+			}
+
+			&-price {
+				color: $desaturated-blue;
+			}
+		}
+
+		&-link {
+			font-family: inherit;
+			position: relative;
+			font-size: 1.3rem;
+			color: $bright-blue;
+			font-weight: 700;
+			text-decoration: none;
+			transition: color 0.1s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background-color: $bright-blue;
+				transition: height 0.1s;
+			}
+
+			&:hover {
+				color: $btn-hover;
+			}
+
+			&:hover::before {
+				height: 0;
+			}
+		}
+	}
+
+	&__btn {
+		font-family: inherit;
+		font-size: 1.5rem;
+		font-weight: 900;
+		border-radius: 11px;
+		border: 2px dashed transparent;
+		cursor: pointer;
+
+		&--accept {
+			margin-bottom: 1.1em;
+			padding: 1em 0;
+			width: 100%;
+			background-color: $bright-blue;
+			color: #fff;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $btn-hover;
+			}
+		}
+
+		&--cancel {
+			padding: 0.5em 1.5em;
+			color: $desaturated-blue;
+			background-color: transparent;
+			transition: color 0.2s;
+
+			&:hover {
+				color: $dark-blue;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		background-image: url('../img/icons/pattern-background-desktop.svg');
+	}
+
+	.app {
+		.inner-wrapper {
+			padding: 2.8em 3em 3em;
+		}
+
+		&__img {
+			max-width: 45rem;
+		}
+
+		&__heading {
+			font-size: 2.8rem;
+		}
+
+		&__text {
+			margin-top: 1em;
+			font-size: 1.6rem;
+			line-height: 26px;
+		}
+
+		&__box {
+			margin: 1.3em 0 2em;
+			padding: 1.5em;
+
+			&-info {
+				margin-left: -4em;
+				font-size: 1.6rem;
+
+				&-name {
+					margin-bottom: 0.4em;
+				}
+			}
+
+			&-link {
+				font-size: 1.4rem;
+			}
+		}
+
+		&__btn {
+			&--accept {
+				margin-bottom: 1.6em;
+			}
+		}
+	}
+}
