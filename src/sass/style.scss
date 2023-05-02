@@ -39,11 +39,16 @@ body {
 	}
 
 	&__img {
-		width: 100%;
-		min-height: 16rem;
-		background-image: url('../img/icons/illustration-hero.svg');
-		background-size: cover;
-		background-position: center;
+		overflow: hidden;
+
+		img {
+			display: block;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.06);
+			}
+		}
 	}
 
 	&__heading {
@@ -157,12 +162,9 @@ body {
 
 	.app {
 		min-width: 45rem;
+
 		.inner-wrapper {
 			padding: 2.8em 3em 2.6em;
-		}
-
-		&__img {
-			min-height: 22rem;
 		}
 
 		&__heading {
