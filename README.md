@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/Loniewski02/FM-order-summery-component
-- Live Site URL: https://loniewski02.github.io/FM-order-summery-component/
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/html-sass-order-summary-component-4thY3C904v)
+- Live Site URL: [live](https://loniewski02.github.io/FM-order-summery-component/)
 
 ## My process
 
